@@ -1,5 +1,6 @@
 package jpa;
 
+import hiber_tricks.com.jpa.Item;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;

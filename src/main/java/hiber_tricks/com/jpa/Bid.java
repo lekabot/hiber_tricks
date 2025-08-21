@@ -1,22 +1,21 @@
-package jpa;
+package hiber_tricks.com.jpa;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
 @Entity
+@Accessors(chain = true)
 @Getter
 @Setter
-@Accessors(chain = true)
 @NoArgsConstructor
-public class User {
+public class Bid {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
-  private String username;
+  private long amount;
+  @ManyToOne(fetch = FetchType.LAZY)
+  private Item item;
 }

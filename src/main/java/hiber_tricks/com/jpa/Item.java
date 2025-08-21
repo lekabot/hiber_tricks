@@ -1,4 +1,4 @@
-package jpa;
+package hiber_tricks.com.jpa;
 
 import jakarta.persistence.*;
 import lombok.Getter;
